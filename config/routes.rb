@@ -1,5 +1,10 @@
 Gitmate::Application.routes.draw do
+  get "github/authorize"
+
+  get "github/callback"
+
   get "mates/index"
+  get "mates/callback"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,7 +55,7 @@ Gitmate::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'mates#index'
+   root :to => 'github#authorize'
 
   # See how all your routes lay out with "rake routes"
 

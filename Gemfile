@@ -13,6 +13,10 @@ gem 'bootstrap-sass', '2.0.4'
 # Haml Template
 gem 'haml-rails'
 
+#Github Api 
+gem "github_api"
+gem "json", "~> 1.7.5"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

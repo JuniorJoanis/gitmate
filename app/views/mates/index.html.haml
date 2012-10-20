@@ -1,2 +1,14 @@
 %h1 Mates#index
+%h2 github
+%p #{@github.inspect if @github}
+%h2 Repo
+%p #{@repository if @repository}
 %p Find me in app/views/mates/index.html.haml
+%h2 User
+%p #{@github_user if @github_user}
+%h2 Users --
+%p #{@users if @users}
+%h2 Authors --
+%p #{@authors if @authors}
+%h2 Commits --
+%p #{@commits if @commits}
