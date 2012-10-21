@@ -1,16 +1,2 @@
-%h1 Mates#index
-%h2 Map
-= gmaps4rails(@markers)
-%h2 github
-%p #{@github.inspect if @github}
-%h2 Repo
-%p #{@repository if @repository}
-%p Find me in app/views/mates/index.html.haml
-%h2 User
-%p #{@github_user if @github_user}
-%h2 Users --
-%p #{@users if @users}
-%h2 Authors --
-%p #{@authors if @authors}
-%h2 Markers --
-%p #{@markers if @markers}
+%div{:class => "map-content-#{'blur' if @markers == "null"}" } 
+  = gmaps("markers" => {"data" => @markers}, "map_options" => {"processing" => "json", "auto_adjust" => false, "auto_zoom" => false, "zoom" => 2})

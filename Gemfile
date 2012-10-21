@@ -34,6 +34,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 #Test with rspec
 gem 'rspec-rails'
 # To use ActiveModel has_secure_password

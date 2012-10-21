@@ -15,16 +15,16 @@ class Mate
   end
 
   def self.in_repo username, repository_name
-   # Rails.cache.fetch("repo_#{username}_#{repository_name}", :expires_in => 2.hour) do
+   Rails.cache.fetch("repo_#{username}_#{repository_name}", :expires_in => 2.hour) do
       commits = Github.repos.commits.all username, repository_name
-      authors = commits.map{ |c| c.committer.login if c.committer.login}.uniq
+      authors = commits.map{ |c| c.committer.login if c.committer}.uniq
       users = []
       authors.each do |author|
          u = Mate.new(author)
          users.push(u.to_gmap) if u.is_located?
       end
       users
-   # end
+   end
   end
   
   def self.find author
@@ -38,7 +38,7 @@ class Mate
   end
   
   def to_gmap
-    { "lat" => "#{self.latitude}", "lng"  => "#{self.longitude}", "title" => "Mate", "description" => "I'm a cool mate based in #{self.location}" }
+    { "lat" => "#{self.latitude}", "lng"  => "#{self.longitude}", "title" => "Mate", "description" => "living in #{self.location}" }
   end
   
 end

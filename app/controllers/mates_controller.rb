@@ -2,12 +2,12 @@ class MatesController < ApplicationController
   before_filter :setup_mates
    
   def index
-   @markers = @users.to_json#.first.to_gmap # if @users
-   #@markers = '[{"description": "hello", "title": "titit", "lat": "", "lng": ""}]'
+    @markers = @users.to_json
     respond_to do |format|
        format.html {}
+       format.json {render :json => @markers}
     end 
-  end 
+  end
   
   private
     def setup_mates

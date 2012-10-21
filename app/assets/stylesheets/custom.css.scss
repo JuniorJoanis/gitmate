@@ -86,3 +86,19 @@ p {
   color: #fff;
   text-decoration: none;
 }
+.container-fluid { margin-top: -35px; padding-left: 13px !important;}
+.map-content-blur{ 
+	filter: url(blur.svg#gaussian_blur);
+	-webkit-filter: blur(2px);	
+}
+
+.mates_index #dialog {
+	display:none;
+}
+
+#map img { 
+  max-width: none;
+}
+#map label { 
+  width: auto; display:inline; 
+}
