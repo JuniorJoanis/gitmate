@@ -4,7 +4,9 @@ class CreateMates < ActiveRecord::Migration
       t.string :name
       t.string :location
       t.string :avatar_url
-
+      t.string :address
+      t.string :latitude
+      t.string :longitude
       t.timestamps
     end
   end

@@ -16,7 +16,9 @@ gem 'haml-rails'
 #Github Api 
 gem "github_api"
 
-
+#google map api
+gem "geocoder", "~> 1.1.4"
+gem 'gmaps4rails'
 gem "json", "~> 1.7.5"
 
 # Gems used only for assets and not required

@@ -2,7 +2,8 @@ class MatesController < ApplicationController
   before_filter :setup_mates
    
   def index
-    @markers = @users.to_gmaps4rails if @users
+   @markers = @users.to_json#.first.to_gmap # if @users
+   #@markers = '[{"description": "hello", "title": "titit", "lat": "", "lng": ""}]'
     respond_to do |format|
        format.html {}
     end 
