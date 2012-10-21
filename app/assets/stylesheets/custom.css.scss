@@ -8,8 +8,22 @@ html {
 
 body {
   padding-top: 60px;
+  z-index: 2;
 }
 
+.container {
+	z-index: 1000;
+	position: relative;
+}
+.background {
+	position: relative;
+	margin-top:-15px;
+	height: 700px;
+	z-index:-100;
+	background:url('/assets/gmap.png') 0 -1px no-repeat; 
+/*	filter: url(blur.svg#gaussian_blur);
+  -webkit-filter: blur(2px);*/
+}
 section {
   overflow: auto;
 }

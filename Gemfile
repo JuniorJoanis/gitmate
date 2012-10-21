@@ -15,6 +15,8 @@ gem 'haml-rails'
 
 #Github Api 
 gem "github_api"
+
+
 gem "json", "~> 1.7.5"
 
 # Gems used only for assets and not required

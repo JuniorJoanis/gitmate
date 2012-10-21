@@ -2,6 +2,7 @@ class MatesController < ApplicationController
   before_filter :setup_mates
    
   def index
+    @markers = @users.to_gmaps4rails if @users
     respond_to do |format|
        format.html {}
     end 

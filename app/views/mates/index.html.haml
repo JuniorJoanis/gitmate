@@ -1,4 +1,6 @@
 %h1 Mates#index
+%h2 Map
+= gmaps4rails(@markers)
 %h2 github
 %p #{@github.inspect if @github}
 %h2 Repo
@@ -10,5 +12,5 @@
 %p #{@users if @users}
 %h2 Authors --
 %p #{@authors if @authors}
-%h2 Commits --
-%p #{@commits if @commits}
+%h2 Markers --
+%p #{@markers if @markers}
