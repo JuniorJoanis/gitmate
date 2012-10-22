@@ -23,6 +23,14 @@ gem "json", "~> 1.7.5"
 
 # Gems used only for assets and not required
 # in production environments by default.
+
+group :test do
+  gem 'sqlite3'
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

@@ -38,7 +38,7 @@ class Mate
   end
   
   def to_gmap
-    { "lat" => "#{self.latitude}", "lng"  => "#{self.longitude}", "title" => "Mate", "description" => "living in #{self.location}" }
+    { "lat" => "#{self.latitude}", "lng"  => "#{self.longitude}", "title" => "Mate", "description" => "I'm #{self.name} and I'm living in #{self.location}" }
   end
   
 end
